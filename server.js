@@ -3,7 +3,8 @@ var express = require('express'),
     app     = express(),
     PORT    = 4000;
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/lib'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.render('index');

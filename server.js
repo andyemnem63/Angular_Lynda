@@ -1,7 +1,7 @@
 var express = require('express'),
     fs      = require('fs'),
     app     = express(),
-    PORT    = 4000;
+    PORT    = 8000;
 
 app.use(express.static(__dirname + '/lib'));
 app.use(express.static(__dirname + '/public'));

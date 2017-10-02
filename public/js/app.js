@@ -3,7 +3,8 @@ var myApp = angular.module('myApp', [
     'artistControllers'
 ]);
 
-myApp.config(['$routeProvider', function ($routeProvider) {
+myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $locationProvider.hashPrefix('');
     $routeProvider.
         when('/list', {
             templateUrl: 'js/partials/list.html',
@@ -11,8 +12,8 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         }).
         when('/details/:itemId', {
             templateUrl: 'js/partials/details.html',
-        controller: 'DetailsController'
-    })
+            controller: 'DetailsController'
+        })
         .otherwise({
             redirectTo: '/list'
         });

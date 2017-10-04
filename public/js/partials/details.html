@@ -1,6 +1,7 @@
 <section class="artistinfo">
-    <h1>Working</h1>
     <div class="artist cf" ng-model="artist">
+        <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+        <a href="#/details/{{nextItem}}" class="btn btn-left">&gt;</a>
         <h1>{{artist[whichItem].name}}</h1>
         <div class="info">
             <h3>{{artist[whichItem].reknown}}</h3>
